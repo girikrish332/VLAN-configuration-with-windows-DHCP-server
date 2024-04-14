@@ -1,0 +1,30 @@
+
+
+enable
+conf t
+hostname SW1
+
+
+vlan 10
+name employees
+
+vlan 20
+name guest
+
+vlan 30
+name DHCPserver
+
+int range f0/1-6
+switchport mode access
+switchport access vlan 10
+
+int range f0/7-12
+switchport mode access
+switchport access vlan 20
+
+int range f0/13-18
+switchport mode access
+switchport access vlan 30
+
+int fa3/3
+switchport mode trunk
