@@ -83,5 +83,3 @@ csharp
 ## Conclusion
 
 Inter-VLAN routing is now configured on the network device, allowing communication between different VLANs within the network.
-
-You can copy and paste this block of text into your preferred text editor or README.md file.
