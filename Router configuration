@@ -1,0 +1,20 @@
+en
+conf t
+hostname R1
+
+int f0/0
+no sh
+
+int fa0/0.10
+encapsulation dot1q 10
+ip add 192.168.10.10 255.255.255.0
+ip helper-address 192.168.3.2   <DHCP Server IP>
+
+int fa0/0.20
+encapsulation dot1q 20
+ip add 192.168.20.10 255.255.255.0
+ip helper-address 192.168.3.2   <DHCP Server IP>
+
+int fa1/0
+encapsulation dot1q 30
+ip add 10.207.1.50 255.255.255.0
